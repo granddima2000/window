@@ -6,8 +6,7 @@ const modals = () => {
               modal = document.querySelector(modalSelector),
               close = document.querySelector(closeSelector),
               windows = document.querySelectorAll('[data-modal]'), // Закрываем все ненужные модальные окна
-              scroll = calcScroll(),
-              gift = document.querySelector('.fixed-gift');
+              scroll = calcScroll();
 
         trigger.forEach(item => { // Обрабатываем псевдомассив и навешиваем на каждый обработчик события
             item.addEventListener('click', (e) => {

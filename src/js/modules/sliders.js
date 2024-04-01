@@ -57,11 +57,14 @@ const sliders = (slides, dir, prev, next) => {
         }
     }
     activateAnimation();
+    // Если наводит пользователь мышкой, то интервал сбрасывается
     items[0].parentNode.addEventListener('mouseenter', () => {
         clearInterval(paused);
     });
+    // Если убирает пользователь мышку, то интервал запускается вновь
     items[0].parentNode.addEventListener('mouseleave', () => {
         activateAnimation();
     });
 }
 export default sliders;
+
