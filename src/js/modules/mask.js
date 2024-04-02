@@ -8,10 +8,10 @@ const mask = (selector) => {
         }else if(elem.createTextRange){
             let range = elem.createTextRange();
 
-            range.collapse(true);                        //будет объединять гранцы диапозона
+            range.collapse(true); //будет объединять гранцы диапозона
             range.moveEnd('character', pos);
             range.moveStart('character', pos);
-            range.select();                             //выделенный кусок сформирован.moveStart и moveEnd
+            range.select(); //выделенный кусок сформирован.moveStart и moveEnd
         }
 
     };
@@ -31,7 +31,7 @@ const mask = (selector) => {
         });
 
         if (event.type === 'blur') { //если польз перестал вносить в инпут
-            if (this.value.length == 2) {         //если кол-во цифр внесен.польз =2
+            if (this.value.length == 2) { //если кол-во цифр внесен.польз =2
                 this.value = '';
             }
         } else {
