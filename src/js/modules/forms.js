@@ -35,6 +35,7 @@ const forms = () => {
             console.log(item.files[0]);
             let dots;
             const arr = item.files[0].name.split('.'); // массив с 2 элементами
+
             arr[0].length > 5 ? dots = '...' : dots = '.'; // Если имя файла больше 5 элементов
             const name = arr[0].substring(0, 5) + dots + arr[1]; // Обрезаем и помещаем .../. jpg
             item.previousElementSibling.textContent = name;
